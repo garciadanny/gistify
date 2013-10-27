@@ -1,7 +1,7 @@
 require 'thor'
 require 'faraday'
 
-module Gistify
+class Gistify
   class CLI < Thor
   end
 end
