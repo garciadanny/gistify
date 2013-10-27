@@ -7,7 +7,7 @@ module Gistify
       let(:password) { 'password1' }
 
       it 'creates an oauth token for the client' do
-        VCR.use_cassette('synopsis') do
+        VCR.use_cassette('githubauth-login') do
           token = GithubAuth.login username, password
           expect(token).to_not be_nil
         end
