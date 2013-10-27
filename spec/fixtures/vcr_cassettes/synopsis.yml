@@ -1,0 +1,60 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://mrsquarepants:password1@api.github.com/authorizations
+    body:
+      encoding: UTF-8
+      string: '{"scopes":["gist"]}'
+    headers:
+      User-Agent:
+      - garciadanny
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Server:
+      - GitHub.com
+      Date:
+      - Sun, 27 Oct 2013 05:19:39 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Status:
+      - 201 Created
+      X-Ratelimit-Limit:
+      - '5000'
+      X-Ratelimit-Remaining:
+      - '4996'
+      X-Ratelimit-Reset:
+      - '1382852431'
+      Cache-Control:
+      - private, max-age=60, s-maxage=60
+      Etag:
+      - '"3e1bc2fd567eeba27d9cea771c7dcf9c"'
+      Location:
+      - https://api.github.com/authorizations/4215838
+      Vary:
+      - Accept, Authorization, Cookie
+      X-Github-Media-Type:
+      - github.beta; format=json
+      X-Content-Type-Options:
+      - nosniff
+      Content-Length:
+      - '371'
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Expose-Headers:
+      - ETag, Link, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-OAuth-Scopes,
+        X-Accepted-OAuth-Scopes
+      Access-Control-Allow-Origin:
+      - '*'
+      X-Github-Request-Id:
+      - 6B02A256:78F1:27A56470:526CA26B
+    body:
+      encoding: UTF-8
+      string: '{"id":4215838,"url":"https://api.github.com/authorizations/4215838","app":{"name":"GitHub
+        API","url":"http://developer.github.com/v3/oauth/#oauth-authorizations-api","client_id":"00000000000000000000"},"token":"a0e20065b7a41e4b65367f9db8399e6f89209813","note":null,"note_url":null,"created_at":"2013-10-27T05:19:39Z","updated_at":"2013-10-27T05:19:39Z","scopes":["gist"]}'
+    http_version: 
+  recorded_at: Sun, 27 Oct 2013 05:19:39 GMT
+recorded_with: VCR 2.6.0
