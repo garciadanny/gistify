@@ -1,4 +1,9 @@
 # Gistify
+
+[![Version](http://allthebadges.io/garciadanny/gistify/badge_fury.png)](http://allthebadges.io/garciadanny/gistify/badge_fury)
+[![Dependencies](http://allthebadges.io/garciadanny/gistify/gemnasium.png)](http://allthebadges.io/garciadanny/gistify/gemnasium)
+[![Build Status](http://allthebadges.io/garciadanny/gistify/travis.png)](http://allthebadges.io/garciadanny/gistify/travis)
+[![Coverage](http://allthebadges.io/garciadanny/gistify/coveralls.png)](http://allthebadges.io/garciadanny/gistify/coveralls)
 [![Code Climate](http://allthebadges.io/garciadanny/gistify/code_climate.png)](http://allthebadges.io/garciadanny/gistify/code_climate)
 
 TODO: Write a gem description
