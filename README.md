@@ -1,4 +1,5 @@
 # Gistify
+[![Code Climate](http://allthebadges.io/garciadanny/gistify/code_climate.png)](http://allthebadges.io/garciadanny/gistify/code_climate)
 
 TODO: Write a gem description
 
