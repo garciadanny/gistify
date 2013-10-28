@@ -13,19 +13,20 @@ module Gistify
         body: post_body.to_json,
         basic_auth: { username: username, password: password }
       }
-      save_token response.parsed_response['token']
+      token = response.parsed_response['token']
+      save_token token, username
     end
 
   private
-    def self.save_token user_token
-      File.open home_directory, 'w', 0600 do |f|
+    def self.save_token user_token, username
+      File.open token_location(username), 'w', 0600 do |f|
         f.write user_token
       end
       user_token
     end
 
-    def self.home_directory
-      File.expand_path '~/.gistify'
+    def self.token_location username
+      File.expand_path "~/.gistify-#{username}"
     end
   end
 end
