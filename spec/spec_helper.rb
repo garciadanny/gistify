@@ -3,6 +3,8 @@ require 'rubygems' if RUBY_VERSION <= "1.8.7"
 $:.unshift File.expand_path("../../lib", __FILE__)
 $:.unshift File.expand_path("../../spec", __FILE__)
 
+require 'coveralls'
+Coveralls.wear!
 require 'gistify'
 require 'vcr'
 require 'support/helper_methods'
