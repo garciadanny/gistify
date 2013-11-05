@@ -15,10 +15,10 @@ module Gistify
 
   private
     def self.user_token
-      File.read token_directory
+      File.read token_location
     end
 
-    def self.token_directory
+    def self.token_location
       File.expand_path '~/.gistify'
     end
 
