@@ -15,14 +15,10 @@ module Gistify
 
   private
     def self.user_token
-      token = ''
-      File.open home_directory, 'r' do |f|
-        f.each_line { |t| token = t}
-      end
-      token
+      File.read token_directory
     end
 
-    def self.home_directory
+    def self.token_directory
       File.expand_path '~/.gistify'
     end
 
