@@ -3,7 +3,6 @@ require 'hirb'
 
 module Gistify
   class GithubGist
-    GISTS_URL = 'https://api.github.com/gists'
 
     include HTTParty
     def self.list
@@ -15,11 +14,7 @@ module Gistify
 
   private
     def self.user_token
-      File.read token_location
-    end
-
-    def self.token_location
-      File.expand_path '~/.gistify'
+      File.read TOKEN_LOCATION
     end
 
     def self.parse response
