@@ -46,8 +46,8 @@ module Gistify
       context 'given a ~/.gistify file exists' do
         it 'retrieves the user token from the file' do
           token = 'user_token1234567'
-          home_directory = File.join(Dir.home, '/.gistify')
-          File.open(home_directory, 'w') { |f| f.write token }
+          token_directory = File.join(Dir.home, '/.gistify')
+          File.open(token_directory, 'w') { |f| f.write token }
 
           expect(GithubGist.send :user_token).to eq token
         end
