@@ -5,8 +5,6 @@ module Gistify
     include HTTParty
     headers 'User-Agent' => 'garciadanny'
 
-    AUTHORIZATIONS_URL = 'https://api.github.com/authorizations'
-
     def self.login username, password
       post_body = { scopes: ['gist'] }
       response = post AUTHORIZATIONS_URL, {
@@ -19,14 +17,10 @@ module Gistify
 
   private
     def self.save_token user_token
-      File.open token_location, 'w', 0600 do |f|
+      File.open TOKEN_LOCATION, 'w', 0600 do |f|
         f.write user_token
       end
       user_token
-    end
-
-    def self.token_location
-      File.expand_path '~/.gistify'
     end
   end
 end
