@@ -11,12 +11,12 @@ module Gistify
           VCR.use_cassette('githubauth-login') do
             token = authenticate_client
 
-            expect(token).to_not be_nil
+            expect(token).to_not be_empty
             expect(token).to be_a String
           end
         end
 
-        it 'saves the token to ~/.gistify-USERNAME' do
+        it 'saves the token to ~/.gistify' do
           VCR.use_cassette('githubauth-login') do
             token = authenticate_client
 
