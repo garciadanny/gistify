@@ -1,5 +1,6 @@
 require "gistify/version"
 
+require 'gistify/cli'
 require 'gistify/githubauth'
 require 'gistify/githubgist'
 
