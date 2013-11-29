@@ -2,7 +2,9 @@ module Gistify
   module HelperMethods
 
     def authenticate_client
-      GithubAuth.login 'mrsquarepants', 'password1'
+      VCR.use_cassette('githubauth-login') do
+        GithubAuth.login ENV['GITHUB_USERNAME'], ENV['GITHUB_PASSWORD']
+      end
     end
   end
 end
