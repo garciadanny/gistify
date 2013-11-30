@@ -66,7 +66,8 @@ module Gistify
           end
 
           after(:all) do
-            File.delete File.join(FileUtils.pwd, '/a.rb')
+            test_file = File.join(FileUtils.pwd, '/a.rb')
+            File.delete(test_file) if File.exists? test_file
           end
 
           it 'reads the contents of a file' do
