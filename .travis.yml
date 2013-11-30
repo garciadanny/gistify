@@ -3,3 +3,5 @@ env:
   matrix:
   - secure: kSGnoo2FAFhir8mc1eGZWbwrjRM4RoVAuxu4PyArjVH8wL938KseLIoAmbv7meimxKwxNj58dWk0hVbGg1YqH9KhjzXAIll/5MLj1Ys1EknRLhkV+Wbrh/U0gFhBjT2UlDrkunw7y2iFn4b2k+jn5thGLqI9Ar9nL2MoLpuRSAQ=
   - secure: N/CoZwB6Oepau86Wgtgp/gzp4y8+aGYTiPj06MUkeuTCUbuCpMYL5sxYGbfCM0vSl206el2d25rA+Pk9BEMAURy/f1neRb5y+J5aJP8BhOyidgIphjHNBWJ/xE8o4o6bzXhOoO8cdNOMPT0RbuWmz4Wu5Gliz66H+lVkwCzo9uo=
+before_script:
+  - RAILS_ENV=test rake setup:vcr_directory
