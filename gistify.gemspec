@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["dannygarcia.me@gmail.com"]
   spec.description   = %q{create gists from the command line}
   spec.summary       = %q{learning how to use thor to create gists from the command line}
-  spec.homepage      = ""
+  spec.homepage      = "https://github.com/garciadanny/gistify"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)
