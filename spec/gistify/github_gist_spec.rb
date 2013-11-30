@@ -53,33 +53,43 @@ module Gistify
     end
 
     describe '.file' do
-      context 'given a file name and extension' do
+      context 'given an authenticated client' do
 
         context 'when the file is found' do
+          let(:file_name) { 'a.rb' }
+          let(:file_contents) { 'abc' }
+          let(:file_location) { File.join FileUtils.pwd, file_name }
 
-          before { authenticate_client }
+          before(:each) do
+            authenticate_client
+            File.open(file_location, 'w') { |f| f.write file_contents }
+          end
 
-          after do
+          after(:all) do
             File.delete File.join(FileUtils.pwd, '/a.rb')
           end
 
           it 'reads the contents of a file' do
             VCR.use_cassette('create_gist') do
-              file_contents = 'abc'
-              file_location = File.join(FileUtils.pwd, '/a.rb')
-              File.open(file_location, 'w') { |f| f.write file_contents }
-
-              expect(GithubGist).to receive(:read_file_contents).with(file_location).and_return 'abc'
-              GithubGist.file 'a.rb'
+              expect(GithubGist).to receive(:read_file_contents).with(file_location).and_return file_contents
+              GithubGist.file file_name
             end
           end
 
-          xit 'creates a gist' do
-
+          it 'creates a gist' do
+            VCR.use_cassette('create_gist') do
+              expect(GithubGist.file file_name).to match /https:/
+            end
           end
         end
 
-        context 'when the file is not found'
+        context 'when the file is not found' do
+          it 'raises a FileNotFound error' do
+            expect{ GithubGist.file 'doesnt_exist.rb' }.to raise_error(FileNotFound,
+              "File not found. Please make sure to `cd` into the file's directory"
+            )
+          end
+        end
 
       end
     end
