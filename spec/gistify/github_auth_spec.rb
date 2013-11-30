@@ -27,6 +27,16 @@ module Gistify
           end
         end
       end
+
+      context 'given an invalid username or password' do
+        it 'returns a helpful error message' do
+          VCR.use_cassette('bad-login') do
+            expect{GithubAuth.login 'bad_username', 'bad_password'}.to raise_error(InvalidCredentialsError,
+              "The Username/Password combination you entered was invalid. Please make sure you didn't misspell anything."
+            )
+          end
+        end
+      end
     end
   end
 end
