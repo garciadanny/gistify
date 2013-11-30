@@ -2,6 +2,5 @@ language: ruby
 before_script:
 - RAILS_ENV=test rake setup:vcr_directory
 env:
-  matrix:
   - secure: NzBb0RedBRgUlpGcEn0A1lGA003t2imSVmSkv/X5RP91eXU3wzFgAwatcQerTpB01zbZjzHB5BT8WgqcUfh4fbbNTbdcK1x90MRcoGxbpqDzCFkFHO7YV7IBssTotwlOyFRhZsIbjVyj7BvZvjqGFvxzPT0ypHYrJlqScO7bHgc=
   - secure: mh2O/Ep/8lke2coG3TJ5WdPvk/0RrUUH0P2K/Bm1D1628j/z3QZdqnJH2fG+97K9U2Sn1WwYFDDSCokTs/4Zn1Qxyuf5b23i9zSlYZVr+3M/orhQVeW4xswFqHJNtDTqv5LS1nilh5LLOPpDq3xIZGqelecrRiFL30Rmgz1EaR8=
