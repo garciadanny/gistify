@@ -14,7 +14,7 @@ module Gistify
       GithubGist.list
     end
 
-    desc 'file [FILENAME]', 'Creates a gist of the specified file'
+    desc 'file [FILENAME]', 'Creates a gist of the specified file. Wrap description in quotes.'
     method_option :description, type: :string, aliases: '-d'
     def file file_name
       GithubGist.file file_name, options[:description]
