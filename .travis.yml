@@ -1,7 +1,7 @@
 language: ruby
+before_script:
+- RAILS_ENV=test rake setup:vcr_directory
 env:
   matrix:
-  - secure: kSGnoo2FAFhir8mc1eGZWbwrjRM4RoVAuxu4PyArjVH8wL938KseLIoAmbv7meimxKwxNj58dWk0hVbGg1YqH9KhjzXAIll/5MLj1Ys1EknRLhkV+Wbrh/U0gFhBjT2UlDrkunw7y2iFn4b2k+jn5thGLqI9Ar9nL2MoLpuRSAQ=
-  - secure: N/CoZwB6Oepau86Wgtgp/gzp4y8+aGYTiPj06MUkeuTCUbuCpMYL5sxYGbfCM0vSl206el2d25rA+Pk9BEMAURy/f1neRb5y+J5aJP8BhOyidgIphjHNBWJ/xE8o4o6bzXhOoO8cdNOMPT0RbuWmz4Wu5Gliz66H+lVkwCzo9uo=
-before_script:
-  - RAILS_ENV=test rake setup:vcr_directory
+  - secure: NzBb0RedBRgUlpGcEn0A1lGA003t2imSVmSkv/X5RP91eXU3wzFgAwatcQerTpB01zbZjzHB5BT8WgqcUfh4fbbNTbdcK1x90MRcoGxbpqDzCFkFHO7YV7IBssTotwlOyFRhZsIbjVyj7BvZvjqGFvxzPT0ypHYrJlqScO7bHgc=
+  - secure: mh2O/Ep/8lke2coG3TJ5WdPvk/0RrUUH0P2K/Bm1D1628j/z3QZdqnJH2fG+97K9U2Sn1WwYFDDSCokTs/4Zn1Qxyuf5b23i9zSlYZVr+3M/orhQVeW4xswFqHJNtDTqv5LS1nilh5LLOPpDq3xIZGqelecrRiFL30Rmgz1EaR8=
