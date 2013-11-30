@@ -21,7 +21,7 @@ module Gistify
         file_contents = read_file_contents file_location
         create_gist file_name, file_contents
       else
-        # raise_error
+        file_not_found
       end
     end
 
@@ -63,7 +63,13 @@ module Gistify
           headers: headers,
           body: body.to_json
       }
-      p response
+       p response['html_url']
+    end
+
+    def self.file_not_found
+      raise FileNotFound, "File not found. Please make sure to `cd` into the file's directory"
     end
   end
+
+  class FileNotFound < StandardError; end
 end
