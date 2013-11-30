@@ -14,12 +14,13 @@ module Gistify
       print_response parse(response)
     end
 
-    def self.file file_name
+    def self.file file_name, description = nil
       pwd = FileUtils.pwd
       file_location = File.join pwd, "/#{file_name}"
       if File.exists?(file_location)
         file_contents = read_file_contents file_location
-        create_gist file_name, file_contents
+        gist_desc = description if description
+        create_gist file_name, file_contents, gist_desc
       else
         file_not_found
       end
@@ -48,10 +49,10 @@ module Gistify
       File.read path
     end
 
-    def self.create_gist file_name, file_contents
+    def self.create_gist file_name, file_contents, description = 'gistify'
       headers = {'Authorization' => "token #{user_token}", 'User-Agent' => 'garciadanny'}
       body = {
-          description: "did this work",
+          description: "#{description}",
           public: true,
           files: {
             "#{file_name}" => {
