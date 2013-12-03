@@ -8,6 +8,8 @@
 
 #### Gistify allows you to create gists from the command line.
 
+###### If you've used Gistify, I would love some feedback on how I could make it better. Thanks!
+
 ## Installation
 
 Add this line to your application's Gemfile:
