@@ -2,4 +2,4 @@ language: ruby
 before_script:
 - RAILS_ENV=test rake setup:vcr_directory
 env:
-  secure: Ei+NGBUc1R+ZFPRq7rEVvXxxeajW+hyS/ZBMha9J5WJWC7wpmh4hEupHEDs3sG6s58ADjz2jro6byKlSKq49hpE6PxU5E6803c9cw4T5DlfW0IZHDJEtymJj7sA4YIc8vCZt/fh6oBHeuF6RRGSdXFGQak5mySxTv0NMReMTMYo=
+  secure: fhuT+QlCqyGTBXelKgxaEmrCQ3yNuKCRyMWB3QnjtoA0r0vTi5faJmwFzNDybu459C44dRg7CEWVEO4Vs41v366v2+/U48k1pMHm1RVxpRevGPgPJZLaw2zQ3tZ4Cz264EKDER/B5ciMoVrwrVd+4OvH+h6VfPW6ypIu3XvIYww=
